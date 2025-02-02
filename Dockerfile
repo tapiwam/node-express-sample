@@ -1,5 +1,5 @@
 # base image
-FROM node:latest
+FROM node:alpine
 
 # setting the work direcotry
 WORKDIR /usr/src/app
@@ -15,4 +15,5 @@ COPY ./index.js .
 
 RUN node -v
 
-CMD ['node','index.js']
+# Run app
+CMD ["node", "index.js"]
